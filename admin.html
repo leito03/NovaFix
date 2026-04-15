@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Admin</title>
+
+<style>
+body{
+    font-family: Arial;
+    padding:40px;
+    background:#f5f5f7;
+}
+
+input, select{
+    display:block;
+    margin:10px 0;
+    padding:10px;
+    width:300px;
+}
+
+button{
+    padding:10px;
+    background:black;
+    color:white;
+    border:none;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.lista{
+    margin-top:30px;
+}
+
+.item{
+    background:white;
+    padding:15px;
+    margin-top:10px;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body onload="checkAdmin(); mostrarLista();">
+
+<h2>Panel Admin</h2>
+
+<button onclick="logoutAdmin()">Cerrar sesión</button>
+
+<input id="nombre" placeholder="Nombre cliente">
+
+<select id="estado">
+    <option>En reparación 🔧</option>
+    <option>Listo para retirar ✅</option>
+    <option>Esperando repuesto ⏳</option>
+</select>
+
+<button onclick="guardarReparacion()">Crear orden</button>
+
+<div id="lista" class="lista"></div>
+
+<script src="./js/app.js"></script>
+
+</body>
+</html>
